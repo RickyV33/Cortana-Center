@@ -7,7 +7,6 @@ router.get('/', function(req, res, next) {
   if (first && last) {
     res.header('Access-Control-Allow-Origin', 'https://www.banweb.pdx.edu');
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-
   } else {
     next()
   }
