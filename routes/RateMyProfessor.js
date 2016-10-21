@@ -6,7 +6,7 @@ const _ = require('lodash');
 const cors = require('cors');
 
 const corsOptions = {
-  origin: 'https://banweb.pdx.edu/pls/oprd/bwskfcls.P_GetCrse',
+  origin: 'https://banweb.pdx.edu/pls/oprd/bwskfcls.P_GetCrse:1',
   // some legacy browsers (IE11, various SmartTVs) choke on 204
   optionsSuccessStatus: 200
 };
