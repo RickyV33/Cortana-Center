@@ -6,11 +6,12 @@ const _ = require('lodash');
 const cors = require('cors');
 
 const corsOptions = {
-  origin: 'https://banweb.pdx.edu',
+  origin: 'https://banweb.pdx.edu/pls/oprd/bwskfcls.P_GetCrse',
   // some legacy browsers (IE11, various SmartTVs) choke on 204
   optionsSuccessStatus: 200
 };
 
+router.options('/', cors(corsOptions));
 router.get('/', cors(corsOptions), (req, res, next) => {
   const first = req.query.first;
   const last = req.query.last;
