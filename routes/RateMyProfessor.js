@@ -18,7 +18,7 @@ router.get('/', cors(), (req, res, next) => {
       let last = {};
       first[result.fname] = _.pick(result, 'url', 'quality', 'easiness');
       last[result.lname] = first;
-      res.status(200).json(last);
+      res.status(200).json({'hi': 'hi'});
     });
   } else {
     next();
