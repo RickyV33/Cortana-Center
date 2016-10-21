@@ -14,8 +14,11 @@ router.get('/', cors(), (req, res, next) => {
   if (first && last) {
     const psu = rmp('Portland State University');
     psu.get(`${first} ${last}`, result => {
-      res.status(200).json(_.pick(result,
-        ['fname', 'lname', 'url', 'quality', 'easiness']));
+      let first = {};
+      let last = {};
+      first[result.fname] = _.pick(result, 'url', 'quality', 'easiness');
+      last[result.lname] = first;
+      res.status(200).json(last);
     });
   } else {
     next();
