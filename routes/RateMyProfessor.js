@@ -11,6 +11,7 @@ const corsOptions = {
   optionsSuccessStatus: 200
 };
 
+router.options('/', cors(corsOptions));
 router.get('/', cors(corsOptions), (req, res, next) => {
   const first = req.query.first;
   const last = req.query.last;
